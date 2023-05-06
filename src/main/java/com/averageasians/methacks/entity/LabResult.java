@@ -20,6 +20,9 @@ public class LabResult {
     @Column(name = "id")
     private int id;
 
+    @Column(name = "test_type")
+    private String testType;
+
     @Column(name = "date")
     private Date date;
 

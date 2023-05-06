@@ -39,4 +39,5 @@ public class ImmRecord {
 
     @Column(name = "next_due_date")
     private Date nextDueDate;
+
 }

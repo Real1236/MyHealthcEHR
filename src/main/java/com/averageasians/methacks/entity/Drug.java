@@ -38,7 +38,7 @@ public class Drug {
     @Column(name = "dosage_form")
     private String dosageForm;
 
-    @Column(name = "dosage_strengths")
+    @Column(name = "dosage_strength")
     private String dosageStrengths;
 
     @Column(name = "route_of_administration")

@@ -1,8 +1,7 @@
 package com.averageasians.methacks.service.impl;
 
 import com.averageasians.methacks.dao.PatientDAO;
-import com.averageasians.methacks.dao.ReportDAO;
-import com.averageasians.methacks.entity.Patient;
+import com.averageasians.methacks.entity.*;
 import com.averageasians.methacks.service.PatientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -31,4 +30,28 @@ public class PatientServiceImpl implements PatientService {
 
     @Override
     public void deletePatient(int id) { patientDAO.deleteById(id); }
+
+    @Override
+    public List<Report> getReports(int id) {
+        if (getPatient(id).isEmpty())
+            return null;
+        return getPatient(id).get().getReports();
+    }
+
+    @Override
+    public List<LabResult> getLabResults(int id) {
+        return null;
+    }
+
+    @Override
+    public List<Drug> getDrugs(int id) {
+        return null;
+    }
+
+    @Override
+    public List<ImmRecord> getImmRecords(int id) {
+        if (getPatient(id).isEmpty())
+            return null;
+        return getPatient(id).get().getImmRecords();
+    }
 }

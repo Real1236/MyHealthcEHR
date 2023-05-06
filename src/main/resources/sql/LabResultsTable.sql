@@ -4,7 +4,7 @@ DROP TABLE IF EXISTS lab_results;
 
 CREATE TABLE lab_results (
      id INT PRIMARY KEY AUTO_INCREMENT,
-     testType VARCHAR(50) NOT NULL,
+     test_type VARCHAR(50) NOT NULL,
      `date` DATE NOT NULL,
      patient_id INT(11) NOT NULL,
      wbc FLOAT NOT NULL,
@@ -32,7 +32,7 @@ CREATE TABLE lab_results (
      FOREIGN KEY (patient_id) REFERENCES patient(id)
 );
 
-INSERT INTO lab_results (patient_id, testType, `date`, wbc, rbc, hgb, hct, platelet_count, glucose, sodium, potassium, chloride, co2, calcium, total_protein, albumin, total_bilirubin, alp, alt, ast, tsh, total_cholesterol, triglycerides, hdl, ldl)
+INSERT INTO lab_results (patient_id, test_type, `date`, wbc, rbc, hgb, hct, platelet_count, glucose, sodium, potassium, chloride, co2, calcium, total_protein, albumin, total_bilirubin, alp, alt, ast, tsh, total_cholesterol, triglycerides, hdl, ldl)
 VALUES
     (1, 'White Blood', '2022-01-01', 5.0, 4.5, 14.0, 42.0, 200.0, 110.0, 140.0, 4.0, 100.0, 28.0, 9.0, 7.0, 4.0, 1.2, 100.0, 30.0, 40.0, 1.5, 200.0, 150.0, 50.0, 100.0),
     (1, 'Thyroid', '2022-02-15', 4.8, 4.0, 12.0, 36.0, 180.0, 90.0, 135.0, 3.5, 95.0, 26.0, 8.5, 6.5, 3.5, 1.0, 80.0, 25.0, 35.0, 1.0, 180.0, 130.0, 45.0, 110.0),
