@@ -10,7 +10,8 @@ CREATE TABLE immunization_records (
   immunization_site VARCHAR(50) NOT NULL,
   immunization_dose VARCHAR(50) NOT NULL,
   immunization_provider VARCHAR(50) NOT NULL,
-  next_due_date DATE
+  next_due_date DATE,
+  FOREIGN KEY (patient_id) REFERENCES patient(id)
 );
 
 INSERT INTO immunization_records (patient_id, immunization_name, immunization_date, immunization_site, immunization_dose, immunization_provider, next_due_date)

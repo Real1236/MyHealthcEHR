@@ -19,7 +19,8 @@ CREATE TABLE reports (
   test_results TEXT,
   allergies TEXT,
   vital_signs TEXT,
-  referral_info TEXT
+  referral_info TEXT,
+  FOREIGN KEY (patient_id) REFERENCES patient(id)
 );
 
 INSERT INTO reports (patient_id, report_date, report_type, report_text, physician_id, diagnosis, medications, procedures, test_results, allergies, vital_signs, referral_info)
