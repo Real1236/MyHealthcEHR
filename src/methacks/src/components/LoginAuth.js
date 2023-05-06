@@ -14,9 +14,9 @@ function googleAuth() {
 
     return(
         <GoogleLogin
-            className="ml-64 mt-8"
+            className=" ml-4 mt-8"
             clientId={clientId}
-            buttonText="Login"
+            buttonText="Login with Google"
             onSuccess={onSuccess}
             onFailure={onFailure}
             cookiePolicy={'single_host_origin'}

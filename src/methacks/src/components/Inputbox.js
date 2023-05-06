@@ -10,7 +10,7 @@ function InputBox() {
   return (
     <div>
       <input
-        className="rounded-md w-64 mt-12 ml-80 border-2 bg-blue-100 p-1 border-black"
+        className="rounded-md w-80 mt-8 ml-64 border-2 bg-[#DBFCFF] p-1 border-[#a9e3e8]"
         id="inputBox"
         type="text"
         value={inputValue}
