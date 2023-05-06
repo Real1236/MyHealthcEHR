@@ -51,6 +51,11 @@ public class Patient {
     private List<Report> reports = new ArrayList<>();
 
     @OneToMany(mappedBy = "patientId", cascade = CascadeType.ALL)
-    private List<ImmRecord> immRecords = new ArrayList<>();
+    private List<LabResult> labResults = new ArrayList<>();
 
+    @OneToMany(mappedBy = "patientId", cascade = CascadeType.ALL)
+    private List<Drug> drugs = new ArrayList<>();
+
+    @OneToMany(mappedBy = "patientId", cascade = CascadeType.ALL)
+    private List<ImmRecord> immRecords = new ArrayList<>();
 }

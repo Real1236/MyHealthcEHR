@@ -40,12 +40,16 @@ public class PatientServiceImpl implements PatientService {
 
     @Override
     public List<LabResult> getLabResults(int id) {
-        return null;
+        if (getPatient(id).isEmpty())
+            return null;
+        return getPatient(id).get().getLabResults();
     }
 
     @Override
     public List<Drug> getDrugs(int id) {
-        return null;
+        if (getPatient(id).isEmpty())
+            return null;
+        return getPatient(id).get().getDrugs();
     }
 
     @Override
