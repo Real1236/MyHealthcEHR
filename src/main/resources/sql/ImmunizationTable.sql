@@ -3,7 +3,7 @@ USE clinical_reports;
 DROP TABLE IF EXISTS immunization_records;
 
 CREATE TABLE immunization_records (
-  immunization_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
   patient_id INT NOT NULL,
   immunization_name VARCHAR(50) NOT NULL,
   immunization_date DATE NOT NULL,
