@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
 public class Drug {
 
     @Id
-    @Column(name = "drug_id")
+    @Column(name = "id")
     private int drugId;
 
     @Column(name = "drug_name")

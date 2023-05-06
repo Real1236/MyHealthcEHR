@@ -1,13 +1,12 @@
 package com.averageasians.methacks.entity;
 
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.Date;
 
 @Data
 @NoArgsConstructor
@@ -17,6 +16,13 @@ import lombok.NoArgsConstructor;
 public class LabResult {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    private int id;
+
+    @Column(name = "date")
+    private Date date;
+
     @Column(name = "patient_id")
     private int patientId;
 

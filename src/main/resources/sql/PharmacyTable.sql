@@ -3,12 +3,12 @@ USE clinical_reports;
 DROP TABLE IF EXISTS pharmacies;
 
 CREATE TABLE pharmacies (
-    pharmacy_id INT(11) NOT NULL AUTO_INCREMENT,
+    id INT(11) NOT NULL AUTO_INCREMENT,
     pharmacy_name VARCHAR(50) NOT NULL,
     address VARCHAR(255) NOT NULL,
     phone_number VARCHAR(20) NOT NULL,
     pharmacist_name VARCHAR(50) NOT NULL,
-    PRIMARY KEY (pharmacy_id)
+    PRIMARY KEY (id)
 );
 
 INSERT INTO pharmacies (pharmacy_name, address, phone_number, pharmacist_name)

@@ -1,9 +1,6 @@
 package com.averageasians.methacks.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -16,7 +13,8 @@ import lombok.NoArgsConstructor;
 public class Pharmacy {
 
     @Id
-    @Column(name = "pharmacy_id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private int pharmacyId;
 
     @Column(name = "pharmacy_name")
