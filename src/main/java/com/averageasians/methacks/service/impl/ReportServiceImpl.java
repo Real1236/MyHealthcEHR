@@ -30,9 +30,7 @@ public class ReportServiceImpl implements ReportService {
     }
 
     @Override
-    public void saveReport(Report report) {
-        reportDAO.save(report);
-    }
+    public void saveReport(Report report) { reportDAO.save(report); }
 
     @Override
     public void deleteReport(int id) {
