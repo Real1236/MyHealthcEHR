@@ -17,6 +17,12 @@ public class Drug {
     @Column(name = "id")
     private int id;
 
+    @Column(name = "patient_id")
+    private int patientId;
+
+    @Column(name = "pharm_name")
+    private String pharmName;
+
     @Column(name = "drug_name")
     private String drugName;
 
