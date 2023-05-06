@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function InputBox({placeholder}) {
+function SearchbarComponent({placeholder}) {
   const [inputValue, setInputValue] = useState('');
 
   const handleInputChange = (event) => {
@@ -10,8 +10,7 @@ function InputBox({placeholder}) {
   return (
     <div>
       <input
-        className="rounded-md w-80 mt-8 ml-64 border-2 bg-[#DBFCFF] p-1 border-[#a9e3e8]"
-        id="inputBox"
+        className="rounded-2xl w-80 mt-8  border-2 bg-[#DBFCFF] p-1 border-[#a9e3e8]"
         type="text"
         placeholder={placeholder}
         value={inputValue}
@@ -21,4 +20,4 @@ function InputBox({placeholder}) {
   );
 }
 
-export default InputBox;
+export default SearchbarComponent;
