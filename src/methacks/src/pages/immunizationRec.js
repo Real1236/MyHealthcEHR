@@ -1,65 +1,50 @@
-<<<<<<< HEAD
-import React from 'react'
-import Immunizationtable from '../images/Immunizationtable.png'
-=======
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
->>>>>>> 17759fba284265d6d9ccd4ccad87643e9327a6e9
 
 const ImmunizationRec = (authenticated) => {
   const [data, setData] = useState([]);
 
-<<<<<<< HEAD
-    return (
-      <div className="ml-80">
-      <b>{authenticated ? '':'not'}</b>
-      <img className="h-96 mt-16" src={Immunizationtable}/>
-        
-      </div>
-    )
-  }
-=======
   useEffect(() => {
-    axios.get('http://localhost:8080/immRecords/1')
-      .then(response => {
-        console.log(response)
+    axios
+      .get('http://localhost:8080/immRecords/1')
+      .then((response) => {
+        console.log(response);
         setData(response.data);
       })
-      .catch(error => {
+      .catch((error) => {
         console.log(error);
       });
   }, []);
 
   return (
     <div className="ml-72">
-      <h1>Drug and Pharmacy Service Information</h1>
-      <table>
+      <h1 className="text-3xl font-bold mb-6">Drug and Pharmacy Service Information</h1>
+      <table className="table-auto w-full border-collapse">
         <thead>
-          <tr>
-            <th>Immunization Name</th>
-            <th>Immunization Date</th>
-            <th>Immunization Site</th>
-            <th>Immunization Dose</th>
-            <th>Immunization Provider</th>
-            <th>Next Due Date</th>
+          <tr className="border-b border-gray-200 bg-gray-100 text-left">
+            <th className="px-4 py-2 font-medium">Immunization Name</th>
+            <th className="px-4 py-2 font-medium">Immunization Date</th>
+            <th className="px-4 py-2 font-medium">Immunization Site</th>
+            <th className="px-4 py-2 font-medium">Immunization Dose</th>
+            <th className="px-4 py-2 font-medium">Immunization Provider</th>
+            <th className="px-4 py-2 font-medium">Next Due Date</th>
           </tr>
         </thead>
         <tbody>
           {data.map((d, idx) => (
-            <tr>
-              <td>{d.immunizationName}</td>
-              <td>{d.immunizationDate}</td>
-              <td>{d.immunizationSite}</td>
-              <td>{d.immunizationDose}</td>
-              <td>{d.immunizationProvider}</td>
-              <td>{d.nextDueDate}</td>
+            <tr key={idx} className="border-b border-gray-200 hover:bg-gray-100 transition-colors duration-300">
+              <td className="px-4 py-2">{d.immunizationName}</td>
+              <td className="px-4 py-2">{d.immunizationDate}</td>
+              <td className="px-4 py-2">{d.immunizationSite}</td>
+              <td className="px-4 py-2">{d.immunizationDose}</td>
+              <td className="px-4 py-2">{d.immunizationProvider}</td>
+              <td className="px-4 py-2">{d.nextDueDate}</td>
             </tr>
           ))}
         </tbody>
       </table>
     </div>
   );
-}
->>>>>>> 17759fba284265d6d9ccd4ccad87643e9327a6e9
-  
-export default ImmunizationRec
+};
+
+export default ImmunizationRec;

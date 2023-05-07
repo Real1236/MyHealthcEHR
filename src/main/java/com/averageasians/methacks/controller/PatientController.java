@@ -13,17 +13,9 @@ import java.util.List;
 @RequestMapping("patients")
 @CrossOrigin(origins = "*") 
 
-public class PatientController implements WebMvcConfigurer  {
+public class PatientController {
 
     PatientService patientService;
-
-    @Override
-    public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/**")
-            .allowedOrigins("http://localhost:3001")
-            .allowedMethods("GET", "POST", "PUT", "DELETE")
-            .allowedHeaders("*");
-    }
 
     @Autowired
     public PatientController(PatientService patientService) {

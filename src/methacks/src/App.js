@@ -9,6 +9,9 @@ import LabTest from './pages/labTest';
 import ImagingReports from './pages/imagingReports';
 import ImmunizationRec from './pages/immunizationRec';
 import  SearchLand  from './pages/search';
+import Note from './pages/note';
+import AlanContainer from './AlanContainer';
+
 
 function App() {
   const [authenticated, setAuthenticated] = useState(false);
@@ -51,8 +54,11 @@ function App() {
           <Route path="/immunization-records" exact element={<ComponentWithSearchbar><ImmunizationRec /></ComponentWithSearchbar>} />
           <Route path="/lab-tests" exact element={<ComponentWithSearchbar><LabTest /></ComponentWithSearchbar>} />
           <Route path="/search" exact element={<ComponentWithSearchbar><SearchLand /></ComponentWithSearchbar>} />
-        </Routes>
+          <Route path="/note" exact element={<ComponentWithSearchbar><Note /></ComponentWithSearchbar>} />
+          </Routes>
       </BrowserRouter>
+      <AlanContainer/>
+
     </div>
   );
 }
