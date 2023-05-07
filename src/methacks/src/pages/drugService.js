@@ -5,16 +5,15 @@ const DrugService = ({ authenticated }) => {
     const [data, setData] = useState([]);
   
     useEffect(() => {
-      if (authenticated) {
         axios.get('http://localhost:8080/patients/1')
           .then(response => {
+            console.log(response)
             setData(response.data);
           })
           .catch(error => {
             console.log(error);
           });
-      }
-    }, [authenticated]);
+    }, []);
   
     return (
       <div className="ml-72">
