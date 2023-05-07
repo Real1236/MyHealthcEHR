@@ -12,7 +12,7 @@ const SearchBar = () => {
 
           <div className="flex items-center ml-2">
             <SearchbarComponent placeholder="Search anything..." />
-            <a href='/search'><button className="mx-4 font-xl text-black" type="submit">
+            <a href='/search'><button className="mx-2 font-xl text-black" type="submit">
               <BiSearchAlt className="text-3xl mt-10" />
             </button>
             </a>

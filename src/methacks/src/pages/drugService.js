@@ -23,12 +23,16 @@ const DrugService = ({ authenticated }) => {
           .then(response => {
             console.log("WOrking")
             setData(response.data);
+            console.log(response.data)
+            console.log(authenticated)
           })
           .catch(error => {
             console.log("WHere am i")
             console.log(error);
           });
     }, [])
+
+    
   
     return (
       <div className="ml-72">

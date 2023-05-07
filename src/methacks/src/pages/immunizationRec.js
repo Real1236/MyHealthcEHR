@@ -1,12 +1,13 @@
 import React from 'react'
+import Immunizationtable from '../images/Immunizationtable.png'
 
 const ImmunizationRec = (authenticated) => {
 
     return (
-      <div>
+      <div className="ml-80">
       <b>{authenticated ? '':'not'}</b>
-      <h1>hi</h1>
-  
+      <img className="h-96 mt-16" src={Immunizationtable}/>
+        
       </div>
     )
   }
