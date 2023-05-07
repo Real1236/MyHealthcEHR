@@ -1,6 +1,6 @@
-DROP SCHEMA IF EXISTS clinical_reports;
+-- DROP SCHEMA IF EXISTS clinical_reports;
 
-CREATE SCHEMA IF NOT EXISTS clinical_reports;
+-- CREATE SCHEMA IF NOT EXISTS clinical_reports;
 
 USE clinical_reports;
 

@@ -1,8 +1,6 @@
 package com.averageasians.methacks.controller;
 
 import com.averageasians.methacks.entity.Report;
-import com.averageasians.methacks.entity.summarize.SummarizeInput;
-import com.averageasians.methacks.entity.summarize.SummarizeOutput;
 import com.averageasians.methacks.service.ReportService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -42,9 +40,9 @@ public class ReportController {
         reportService.deleteReport(id);
     }
 
-    @PostMapping("/summarize")
+    @GetMapping("/summarize")
     public void summarize(){ reportService.summarize(); }
 
-    @PostMapping("/summarize/{id}")
+    @GetMapping("/summarize/{id}")
     public String summarizeById(@PathVariable Integer id) { return reportService.summarizeById(id); }
 }
