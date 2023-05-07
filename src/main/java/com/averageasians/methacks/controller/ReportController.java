@@ -34,6 +34,12 @@ public class ReportController {
         return patient.map(Patient::getReports).orElse(null);
     }
 
+    @GetMapping("/r/{id}")
+    public Report getReport(@PathVariable Integer id) {
+        Optional<Report> report = reportService.getReport(id);
+        return report.orElse(null);
+    }
+
     @PostMapping
     public void saveReport(@RequestBody Report report) {
         reportService.saveReport(report);
