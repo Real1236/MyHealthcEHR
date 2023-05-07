@@ -45,7 +45,7 @@ function Login() {
     <div className="flex">
 
     <div className="mb-96">
-      <h1 className="text-3xl ml-64 mt-4 font-bold mt-36">Login To Your Account</h1>
+      <h1 className="text-3xl ml-64 mt-4 font-bold mt-48">Login To Your Account</h1>
       <div className="ml-16 flex mb-4">
       <img className="w-30 ml-40 h-14 mt-8 p-2 rounded-sm shadow-xl border-gray-100 border-2" src={Outlook}/>
         <LoginButton />

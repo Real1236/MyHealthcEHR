@@ -2,8 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
 import Searchbar from "./components/SearchBar";
 import Login from "./components/Login"
-import Dashboard from "./pages/dashboard"
-import Main from "./pages/Main"
+import Dashboard from "./pages/Dashboard"
 import Sidebar from './components/Sidebar';
 import DrugService from './pages/drugService';
 import LabTest from './pages/labTest';
