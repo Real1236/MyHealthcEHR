@@ -15,8 +15,6 @@ const DrugService = ({ authenticated }) => {
   //       });
   //   }
   // }, [authenticated]);
-<<<<<<< HEAD
-=======
 
   useEffect(() => {
     console.log("Before the api call");
@@ -30,7 +28,6 @@ const DrugService = ({ authenticated }) => {
           console.log(error);
         });
   }, [])
->>>>>>> 17759fba284265d6d9ccd4ccad87643e9327a6e9
 
   return (
     <div>
