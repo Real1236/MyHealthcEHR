@@ -15,7 +15,12 @@ public class WebClientConfig {
     public WebClient webClient() {
         return WebClient.builder()
                 .baseUrl(BASE_URL)
-                .defaultHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
+                .defaultHeaders(header -> {
+                    header.add(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE);
+                    header.add(HttpHeaders.ACCESS_CONTROL_ALLOW_ORIGIN, "*");
+                    header.add(HttpHeaders.ACCESS_CONTROL_ALLOW_METHODS, "POST, GET, OPTIONS");
+                    header.add(HttpHeaders.ACCESS_CONTROL_ALLOW_HEADERS, "Content-Type");
+                })
                 .build();
     }
 }

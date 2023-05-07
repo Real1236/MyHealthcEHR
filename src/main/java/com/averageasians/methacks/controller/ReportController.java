@@ -1,21 +1,26 @@
 package com.averageasians.methacks.controller;
 
+import com.averageasians.methacks.entity.Patient;
 import com.averageasians.methacks.entity.Report;
+import com.averageasians.methacks.service.PatientService;
 import com.averageasians.methacks.service.ReportService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("reports")
 public class ReportController {
 
     ReportService reportService;
+    PatientService patientService;
 
     @Autowired
-    public ReportController(ReportService reportService) {
+    public ReportController(ReportService reportService, PatientService patientService) {
         this.reportService = reportService;
+        this.patientService = patientService;
     }
 
     @GetMapping
@@ -24,10 +29,9 @@ public class ReportController {
     }
 
     @GetMapping("/{id}")
-    public Report getReport(@PathVariable Integer id) {
-        if (reportService.getReport(id).isEmpty())
-            return null;
-        return reportService.getReport(id).get();
+    public List<Report> getReports(@PathVariable(name = "id") Integer patientId) {
+        Optional<Patient> patient = patientService.getPatient(patientId);
+        return patient.map(Patient::getReports).orElse(null);
     }
 
     @PostMapping
