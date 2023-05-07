@@ -4,25 +4,39 @@ import axios from 'axios';
 const DrugService = ({ authenticated }) => {
     const [data, setData] = useState([]);
   
+    // useEffect(() => {
+    //   if (authenticated) {
+    //     axios.get('http://localhost:8080/patients/1')
+    //       .then(response => {
+    //         console.log("WOrking")
+    //         setData(response.data);
+    //       })
+    //       .catch(error => {
+    //         console.log("WHere am i")
+    //         console.log(error);
+    //       });
+    //   }
+    // }, [authenticated]);
+
     useEffect(() => {
-      if (authenticated) {
         axios.get('http://localhost:8080/patients/1')
           .then(response => {
+            console.log("WOrking")
             setData(response.data);
           })
           .catch(error => {
+            console.log("WHere am i")
             console.log(error);
           });
-      }
-    }, [authenticated]);
+    }, [])
   
     return (
       <div className="ml-72">
         <h1>Drug Service Information</h1>
         {authenticated && (
-          <ul>
+          <h1 className='ml-96'>
             {data.reports[0].reportDate}
-          </ul>
+          </h1>
         )}
         {!authenticated && <p>Please log in to see the drug service information.</p>}
       </div>
