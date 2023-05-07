@@ -6,12 +6,12 @@ public class SummarizeInput {
     private String format;
     private String model;
     private String extractiveness;
-    private float temperature;
+    private double temperature;
     private String additional_command;
 
     public SummarizeInput() {}
 
-    public SummarizeInput(String text, String length, String format, String model, String extractiveness, float temperature, String additional_command){
+    public SummarizeInput(String text, String length, String format, String model, String extractiveness, double temperature, String additional_command){
         this.text = text;
         this.length = length;
         this.format = format;
@@ -60,11 +60,11 @@ public class SummarizeInput {
         this.extractiveness = extractiveness;
     }
 
-    public float getTemperature() {
+    public double getTemperature() {
         return temperature;
     }
 
-    public void setTemperature(float temperature) {
+    public void setTemperature(double temperature) {
         this.temperature = temperature;
     }
 

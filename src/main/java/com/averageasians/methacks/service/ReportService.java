@@ -12,5 +12,6 @@ public interface ReportService {
     Optional<Report> getReport(int id);
     void saveReport(Report report);
     void deleteReport(int id);
-    SummarizeOutput summarize(SummarizeInput input);
+    void summarize();
+    String summarizeById(int id);
 }

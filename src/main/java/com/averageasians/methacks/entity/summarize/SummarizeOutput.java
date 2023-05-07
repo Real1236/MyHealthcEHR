@@ -15,7 +15,7 @@ public class SummarizeOutput {
     }
 
     public String getId() {
-        return id;
+        return this.id;
     }
 
     public void setId(String id) {
@@ -23,7 +23,7 @@ public class SummarizeOutput {
     }
 
     public String getSummary() {
-        return summary;
+        return this.summary;
     }
 
     public void setSummary(String summary) {

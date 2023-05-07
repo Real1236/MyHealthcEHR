@@ -43,7 +43,8 @@ public class ReportController {
     }
 
     @PostMapping("/summarize")
-    public SummarizeOutput summarize(@RequestBody SummarizeInput input){
-        return reportService.summarize(input);
-    }
+    public void summarize(){ reportService.summarize(); }
+
+    @PostMapping("/summarize/{id}")
+    public String summarizeById(@PathVariable Integer id) { return reportService.summarizeById(id); }
 }
