@@ -10,6 +10,8 @@ import ImagingReports from './pages/imagingReports';
 import ImmunizationRec from './pages/immunizationRec';
 import  SearchLand  from './pages/search';
 import Note from './pages/note';
+import AlanContainer from './AlanContainer';
+
 
 function App() {
   const [authenticated, setAuthenticated] = useState(false);
@@ -55,6 +57,8 @@ function App() {
           <Route path="/note" exact element={<ComponentWithSearchbar><Note /></ComponentWithSearchbar>} />
           </Routes>
       </BrowserRouter>
+      <AlanContainer/>
+
     </div>
   );
 }
