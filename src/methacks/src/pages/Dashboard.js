@@ -27,10 +27,10 @@ const Dashboard = (authenticated) => {
         <div className=" ml-12 mt-16">
         
         <h1 className="text-2xl font-bold"> Name:</h1> 
-        <p className='text-md'> Vaishnavi Jeyacumar</p>
+        <p className='text-md'> {data.name}</p>
         <h1 className="text-2xl  mt-6 font-bold"> Account:</h1> 
-        <p className='text-md'> Vaishnavijeyacumar123@gmail.com</p>
-        <h1 className="text-xl  mt-6 font-bold text-[#2195BD]"> MedHealthID: 76D3OI</h1> 
+        <p className='text-md'> {data.email}</p>
+        <h1 className="text-xl  mt-6 font-bold text-[#2195BD]"> MedHealthID: {data.id}</h1> 
         </div>
       </div>
       
@@ -39,7 +39,6 @@ const Dashboard = (authenticated) => {
     <div className="ml-80 mt-12 p-8 rounded-xl shadow mx-auto bg-[#BCE5E9]">
       <div>
       <h3 className='text-3xl'>General Information</h3>
-        <p>Name: {data.name}</p>
         <p>Sex: {data.sex}</p>
         <p>Phone: {data.phone}</p>
         <p>DOB: {data.date}</p>
