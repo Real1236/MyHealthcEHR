@@ -5,13 +5,13 @@ const ImagingReports = (authenticated) => {
   const [data, setData] = useState([]);
   
   useEffect(() => {
-      axios.get('http://localhost:8080/reports/1')
-        .then(response => {
-          setData(response.data);
-        })
-        .catch(error => {
-          console.log(error);
-        });
+    axios.get('http://localhost:8080/reports/1')
+      .then(response => {
+        setData(response.data);
+      })
+      .catch(error => {
+        console.log(error);
+      });
   }, []);
 
   return (
