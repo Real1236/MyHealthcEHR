@@ -31,6 +31,9 @@ public class Report {
     @Column(name = "report_text")
     private String reportText;
 
+    @Column(name = "report_summary")
+    private String reportSummary;
+
     @Column(name = "physician_id")
     private int physicianId;
 
