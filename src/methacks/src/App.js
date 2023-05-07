@@ -8,6 +8,7 @@ import DrugService from './pages/drugService';
 import LabTest from './pages/labTest';
 import ImagingReports from './pages/imagingReports';
 import ImmunizationRec from './pages/immunizationRec';
+import  SearchLand  from './pages/search';
 
 function App() {
   const [authenticated, setAuthenticated] = useState(false);
@@ -46,7 +47,9 @@ function App() {
             <ComponentWithSearchbar><ImmunizationRec authenticated={authenticated}/></ComponentWithSearchbar>}/>
           <Route path="/lab-tests" exact element={
             <ComponentWithSearchbar><LabTest authenticated={authenticated}/></ComponentWithSearchbar>}/>
-
+            <Route path="/search" exact element={
+              <ComponentWithSearchbar><SearchLand authenticated={authenticated}/></ComponentWithSearchbar>}/>
+  
         </Routes>
       </BrowserRouter>
     </div>
