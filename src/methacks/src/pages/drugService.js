@@ -19,32 +19,6 @@ const DrugService = ({ authenticated }) => {
     // }, [authenticated]);
 
     useEffect(() => {
-<<<<<<< HEAD
-        axios.get('http://localhost:8080/patients/1')
-          .then(response => {
-            console.log("WOrking")
-            setData(response.data);
-            console.log(response.data)
-            console.log(authenticated)
-          })
-          .catch(error => {
-            console.log("WHere am i")
-            console.log(error);
-          });
-    }, [])
-
-    
-  
-    return (
-      <div className="ml-72">
-        <h1>Drug Service Information</h1>
-        {authenticated && (
-          <h1 className='ml-96'>
-            {data.reports[0].reportDate}
-          </h1>
-        )}
-        {!authenticated && <p>Please log in to see the drug service information.</p>}
-=======
       axios.get('http://localhost:8080/drugs/1')
         .then(response => {
           console.log(response)
@@ -88,7 +62,6 @@ const DrugService = ({ authenticated }) => {
             ))}
           </tbody>
         </table>
->>>>>>> 17759fba284265d6d9ccd4ccad87643e9327a6e9
       </div>
     );
   };

@@ -18,8 +18,8 @@ public class WebClientConfig {
                 .defaultHeaders(header -> {
                     header.add(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE);
                     header.add(HttpHeaders.ACCESS_CONTROL_ALLOW_ORIGIN, "*");
-                    header.add(HttpHeaders.ACCESS_CONTROL_ALLOW_METHODS, "POST, GET, OPTIONS");
-                    header.add(HttpHeaders.ACCESS_CONTROL_ALLOW_HEADERS, "Content-Type");
+                    header.add(HttpHeaders.ACCESS_CONTROL_ALLOW_METHODS, "DELETE, POST, GET, OPTIONS");
+                    header.add(HttpHeaders.ACCESS_CONTROL_ALLOW_HEADERS, "Content-Type, Authorization, X-Requested-With");
                 })
                 .build();
     }
