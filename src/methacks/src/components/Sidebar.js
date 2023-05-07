@@ -35,9 +35,9 @@ const Sidebar = () => {
 
   return (
     <header className=" absolute mb-96 border-[#999999] border-solid border-2 flex flex-col bg-[#ffffff] z-[99999999] w-64 h-full shadow-xl">
-      <div className="flex justify-center items-center py-4">
+      <div className="flex justify-center items-center ">
         <Link className="flex flex-row items-center gap-4 font-bold text-xl text-teal" to="/Dashboard">
-          <img src={Logo} className="h-12" alt="Logo" />
+          <img src={Logo} className="h-12 mt-4" alt="Logo" />
         </Link>
       </div>
       <nav className="flex-grow h-full">
@@ -49,8 +49,8 @@ const Sidebar = () => {
             }`}
             to={path}
           >
-            <span className="text-black my-12 mr-6">{name}</span>
-            <span className="">{icon}</span>
+            <span className="text-black my-8 mr-8">{name}</span>
+            <span className="w-16">{icon}</span>
           </Link>
         ))}
       </nav>

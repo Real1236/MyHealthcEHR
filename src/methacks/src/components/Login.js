@@ -13,20 +13,7 @@ import Logo from '../images/logo.png'
 const clientId = "331894438865-bknj5cat5h7iqe4t484t0iu3dor43stp.apps.googleusercontent.com";
 
 
-function Login() {
-  const [authenticated, setAuthenticated] = useState(false)
-  const navigate = useNavigate();
-  
-
-  function handleLogin() {
-    setAuthenticated(true);
-
-    if (authenticated) {
-      navigate('/Dashboard');
-    }
-  }
-
-
+function Login({ authenticated, handleLogin }) {
 
   useEffect(() => {
     function start() {
@@ -55,7 +42,7 @@ function Login() {
       <InputBox placeholder="Gmail" />
       <InputBox placeholder="Password" />
 
-      <div className="ml-12"><button className="rounded-3xl bg-[#57BEC8] mt-12 text-white px-4 py-2 text-xl ml-80" onClick={handleLogin}>Sign In</button></div>
+      <a href='/Dashboard'><div className="ml-12"><button className="rounded-3xl bg-[#57BEC8] mt-12 text-white px-4 py-2 text-xl ml-80" onClick={handleLogin}>Sign In</button></div></a>
     </div>
   <div className='ml-80'>
     <Signup/>

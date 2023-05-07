@@ -1,9 +1,24 @@
+<<<<<<< HEAD
+import React from 'react'
+import Immunizationtable from '../images/Immunizationtable.png'
+=======
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+>>>>>>> 17759fba284265d6d9ccd4ccad87643e9327a6e9
 
 const ImmunizationRec = (authenticated) => {
   const [data, setData] = useState([]);
 
+<<<<<<< HEAD
+    return (
+      <div className="ml-80">
+      <b>{authenticated ? '':'not'}</b>
+      <img className="h-96 mt-16" src={Immunizationtable}/>
+        
+      </div>
+    )
+  }
+=======
   useEffect(() => {
     axios.get('http://localhost:8080/immRecords/1')
       .then(response => {
@@ -45,5 +60,6 @@ const ImmunizationRec = (authenticated) => {
     </div>
   );
 }
+>>>>>>> 17759fba284265d6d9ccd4ccad87643e9327a6e9
   
 export default ImmunizationRec

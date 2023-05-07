@@ -14,7 +14,7 @@ const Toggle = () => {
           <Switch
             onChange={handleChange}
             checked={checked}
-            className="ml-80 mt-5"
+            className="ml-80 mt-10"
           />
 
         </div>
