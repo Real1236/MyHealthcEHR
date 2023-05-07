@@ -2,7 +2,6 @@ package com.averageasians.methacks.controller;
 
 import com.averageasians.methacks.entity.Drug;
 import com.averageasians.methacks.entity.Patient;
-import com.averageasians.methacks.entity.Report;
 import com.averageasians.methacks.service.DrugService;
 import com.averageasians.methacks.service.PatientService;
 import org.springframework.beans.factory.annotation.Autowired;
