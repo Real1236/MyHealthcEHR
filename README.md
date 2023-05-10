@@ -1,6 +1,6 @@
 ![image](https://github.com/Real1236/methacks/assets/58100386/dab00768-fd2c-4dd3-ba90-476a77e6d7e9)
 
-## Inspiration
+## Inspiration for MyHealthcEHR
 One of the main requirements that patients look for in their healthcare providers is **clear and effective communication** about information such as their medical conditions, treatment options, and potential side effects. One of the places where such information is stored is on a patient’s health record. 
  
 An **electronic health record (EHR)** is a secure and private lifetime record of your health history. It gives your healthcare team, including family doctors, nurses, emergency room clinicians, and specialists, real-time access to your relevant medical information, so they can provide the best care for you. As a patient, you - or your substitute decision-maker - have the right to access a copy of your personal health information. 
